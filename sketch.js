@@ -45,7 +45,9 @@ async function getBackgroundImg(){
     var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
     var jresponse = await response.json()
     var dt = jresponse.datetime
-    var hour = dt.slice(12,14)
+    console.log(dt)
+    hour = dt.slice(11,13)
+    console.log(hour)
 
     if(hour>=0 && hour<18 ){
         bg = "sunrise.png";
